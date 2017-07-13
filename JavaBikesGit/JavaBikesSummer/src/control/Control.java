@@ -5,7 +5,8 @@ import java.util.*;
 import model.*;
 import view.*;
 
-public class Control {
+public class Control 
+{
 	
 	static WelcomeMenu welcome = new WelcomeMenu();
 	static CustomerView customerView = new CustomerView();
@@ -71,7 +72,7 @@ public class Control {
 			System.out.println("Enter a username: Must be at least 5 letters: ");
 			details = input.nextLine();
 			
-			if (details.matches("([A-Za-z]+).{5,}"))
+			if (details.matches("^[a-zA-Z0-9_.-]{5,}$"))
 			{
 				customer.setUsername(details);
 				details = null;
@@ -89,7 +90,7 @@ public class Control {
 			System.out.println("Enter a password: Must be at least 5 Characters and contain letters and numbers");
 			details = input.nextLine();
 			
-			if (details.matches("([A-Za-z0-9].{5,}"))
+			if (details.matches("^[a-zA-Z0-9_.-]{5,}$"))
 			{
 				customer.setPassword(details);
 			}
