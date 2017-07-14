@@ -80,6 +80,7 @@ public class Control
 		else
 		{
 			System.out.println("Wrong input: Must be at least 5 Latin letters ");
+			details = null;
 		}
 		}	
 		
